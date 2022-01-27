@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: orangered;
+        }
+    </style>
+    <title>giorgi-enrico</title>
+</head>
+
+<body>
+    <hgroup>
+        <h1>HTML5</h1>
+        <h2>Verifica Tag e Form</h2>
+    </hgroup>
+    <nav id="sommario">
+        <h2>Sommario</h2><br>
+        <ul>
+            <li><a href="#sommario">Sommario</a></li>
+            <li><a href="#tabella">Tabella</a></li>
+            <li><a href="#form">Form</a></li>
+            <li><a href="#tagsemantici">HTML5 Tag Semantici</a></li>
+        </ul>
+    </nav>
+    <section id="tabella">
+        <h2>Sezione 1: Tabella</h2>
+        <table style="width:100%">
+            <h3 style="text-align: center;">La tabella Nutrizionale</h3>
+            <thead>
+                <tr>
+                    <th>Valori medi</th>
+                    <th>Per 100g</th>
+                    <th>Per porzione(8,7g)</th>
+                    <th>Dettagli</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr style="background-color:lightgray;">
+                    <td><b>Valore energetico</b></td>
+                    <td>1191 kj <br>4744 kcal</td>
+                    <td>173kj <br>41 kcal</td>
+                    <td rowspan="3">Sezione 1</td>
+                </tr>
+                <tr>
+                    <td>Grassi <br>di cui acidi saturi</td>
+                    <td>1,8 g <br>8,8 g</td>
+                    <td>1,6 g <br>0,8 g</td>
+
+                </tr>
+                <tr style="background-color:lightgray;">
+                    <td>Carboidrati <br>di cui zuccheri</td>
+                    <td>70 g <br>23,5 g</td>
+                    <td>6,1 g <br>2,0 g</td>
+
+                </tr>
+                <tr>
+                    <td>Proteine</td>
+                    <td>7 g</td>
+                    <td>6,6 g</td>
+                    <td rowspan="2">Sezione 2</td>
+                </tr>
+                <tr style="background-color:lightgray;">
+                    <td>Sale</td>
+                    <td>0,270 g</td>
+                    <td>0,023 g</td>
+
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr style="background-color: #0fcee7;">
+                    <td colspan="2">
+                        <img src="./img/facebook.png"   width="25px" height="auto" alt="facebook-logo">
+                        facebook.com/sararossininutrizionista
+                    </td>
+                    <td colspan="2"><a href="http://sararossininutrizionista.it">sararossininutrizionista.it</a></td>
+                </tr>
+                <tr style="background-color: #3acbdf9c;">
+                    <td colspan="4">&copy;<cite>Dottoressa nutrizionista Sara Rossi</cite></td>
+
+                </tr>
+
+            </tfoot>
+        </table>
+    </section>
+    <section id="form">
+        <h2>Sezione 2:Form</h2>
+        <form action="form.php" method="get" name="myform">
+            <fieldset id="dati-anagrafici">
+                <legend>Dati Anagrafici</legend>
+                <label for="cognome">Cognome:</label>
+                <input type="text" name="cognome" id="cognome" placeholder="inp-cognome" autocomplete="off">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="inp-nome" autocomplete="off">
+            </fieldset>
+            <fieldset id="dati-residenza">
+                <legend>Dati Residenza</legend>
+                <label for="indirizzo">Indirizzo</label>
+                <input type="text" name="indirizzo" id="indirizzo">
+                <label for="cap">Cap:</label>
+                <input type="text" name="cap" id="cap">
+                <label for="localita">Località:</label>
+                <input type="text" name="localita" id="localita">
+                <label for="provincia">Provincia:</label>
+                <input type="text" name="provincia" id="provincia">
+                <select name="stato" id="stato">Stato:
+                    <optgroup label="Euroma">
+                        <option value="italia">Italia</option>
+                        <option value="francia">Francia</option>
+                        <option value="germania">Germania</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="cina">Cina</option>
+                        <option value="thailandia">Thailandia</option>
+                        <option value="jappone">Jappone</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset id="dati-contatto">
+                <legend>Dati Contatto</legend>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" name="telefono" id="telefono">
+            </fieldset>
+            <fieldset id="dati-accesso">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <label for="conferma-password">Conferma Password:</label>
+                <input type="password" name="conferma-password" id="conferma-password">
+            </fieldset>
+            <fieldset id="dati-personali">
+                <legend>Dati Personali</legend>
+                <label for="mese-anno">Mese + Anno Attuale:</label>
+                <input type="month" name="mese-anno" id="mese-anno" placeholder="2018-11">
+                <label for="colore">Colore Preferito:</label>
+                <input type="color" name="colore" id="colore">
+
+                <label for="eta">Età:</label>
+                <input type="number" name="eta" id="eta" min="18" max="99">
+                <label for="url">Blog Personale (url):</label>
+                <input type="url" name="url" id="url">
+            </fieldset>
+            <fieldset id="dati-gradimento">
+                <legend>Dati Gradimento</legend>
+                <label for="voto">Voto:</label>
+                <input type="range" name="voto" id="voto" min="1" max="10" step="1">
+                <label for="sport">Sport preferito:</label>
+                <input list="browsers" name="list-sport" id="list-sport">
+                <datalist id="browsers">
+                    <option value="Calcio">
+                    <option value="Tennis">
+                    <option value="Basket">
+                    <option value="Nuoto">
+                </datalist>
+                <label for="commento">Commento:</label>
+                <textarea id="commento" name="commento" rows="5" cols="50">
+                </textarea>
+            </fieldset>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+    <section id="tagsemantici">
+        <h2>Sezione 3: Html5 Tag</h2>
+        <article id="risorsa-ricercata">
+            <h3>SOCIAL MEDIA E WEBMARKETING MANAGER</h3>
+            <p>La risorsa si occuperà in completa autonomia di: Gestione del Sito Web e dei social aziendali
+                (linkedin,Facebook, Twitter)
+                Creazione dei contenuti web di testo e video in ottica SEO Gestione della comunicazione
+                associativa ed organizzativa(Newsletter,email,inviti,etc)"Potrebbe interessarti:
+                https://www.romatoday.it/annunci/social-media-manager-3hynq.job
+                Seguici su Facebook: https://it-it.facebook.com/romatoday/</p>
+
+            <footer id="footer-risorsa-ricercata">
+                <details>
+                    <a href="./giorgi-enrico.html">News 1</a><br>
+                    <a href="./giorgi-enrico.html">News 2</a>
+                </details>
+                <p><small>Autore: Corsista</small></p>
+            </footer>
+        </article>
+    </section>
+</body>
+
+</html>
