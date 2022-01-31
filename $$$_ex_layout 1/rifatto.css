@@ -1,0 +1,26 @@
+#logo{
+    text-align: center;
+    display: block;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+}
+
+#nav-menu ul li{
+    display: inline;
+}
+
+#nav-menu{
+    display: block;
+    background: orange;
+    padding: 10px;
+    text-align: center;
+}
+#chisiamo div {
+margin: 10%;
+}
+
+@media screen and (max-width:768px){
+   
+   
+}
